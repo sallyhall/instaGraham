@@ -1,3 +1,20 @@
 body, html {
   margin: 0;
   padding: 0; }
+
+.delete {
+  float: right; }
+
+.jumbotron {
+  padding: 20px 100px;
+  margin-bottom: 0;
+  padding-bottom: 30px;
+  border-bottom: 1px solid gray;
+  background-color: #7599E5; }
+
+.pics {
+  border-left: 1px solid gray;
+  padding-top: 30px; }
+
+.picForm {
+  padding-top: 30px; }
