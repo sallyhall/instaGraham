@@ -25,25 +25,17 @@ module.exports = grahamPage = {
       $("#imageURL").val("");
     });
 
-    $(".pics").on("click",".fa-heart-o",function (e) {
+    $(".pics").on("click",".like",function (e) {
       e.preventDefault();
       var id = $(this).attr("id");
       $(this).toggleClass("fa-heart-o");
       $(this).toggleClass("fa-heart");
       var likedPic = grahamPage.pictureCollection.get(id);
-      var likes = likedPic.get('likes')+1;
-      likedPic.set('likes',likes);
-      likedPic.save();
-      $($(this).parent().siblings("span")[0]).html("  "+likes+" likes");
-      // grahamPage.loadPictures();
-    });
-    $(".pics").on("click",".fa-heart",function (e) {
-      e.preventDefault();
-      var id = $(this).attr("id");
-      $(this).toggleClass("fa-heart-o");
-      $(this).toggleClass("fa-heart");
-      var likedPic = grahamPage.pictureCollection.get(id);
-      var likes = likedPic.get('likes')-1;
+      if ($(this).hasClass("fa-heart")){
+        var likes = likedPic.get('likes')+1;
+      }else{
+        var likes = likedPic.get('likes')-1;
+      }
       likedPic.set('likes',likes);
       likedPic.save();
       $($(this).parent().siblings("span")[0]).html("  "+likes+" likes");
