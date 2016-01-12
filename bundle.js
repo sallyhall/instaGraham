@@ -50,7 +50,8 @@ module.exports = grahamPage = {
       deletedPic.destroy();
       $(this).parents(".row")[0].remove();
       grahamPage.loadPictures();
-    })
+    });
+
   },
   loadPictures: function (collection) {
     $(".pics").html("");
@@ -12743,9 +12744,13 @@ return jQuery;
 var Backbone = require('backbone');
 var PictureModel = require('./pictureModel');
 
+
 module.exports = Backbone.Collection.extend({
   url: 'http://tiny-tiny.herokuapp.com/collections/instaGraham',
-  model: PictureModel
+  model: PictureModel,
+  initialize: function () {
+    this.fetch();
+  }
 });
 
 },{"./pictureModel":7,"backbone":3}],7:[function(require,module,exports){

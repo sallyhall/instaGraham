@@ -5,9 +5,9 @@
   "main": "main.js",
   "scripts": {
     "bundle": "./node_modules/.bin/browserify main.js -o bundle.js",
-    "watch": "./node_modules/.bin/watchify main.js -o bundle.js & ./node_modules/.bin/node-sass styles.scss styles.css -w",
+    "watch": "./node_modules/.bin/watchify main.js -o bundle.js & ./node_modules/.bin/node-sass sassy.scss styles.css -w",
     "serve": "./node_modules/.bin/serve",
-    "sass": "./node_modules/.bin/node-sass styles.scss styles.css",
+    "sass": "./node_modules/.bin/node-sass sassy.scss styles.css",
     "start": "npm run watch & npm run serve"
   },
   "author": "",

@@ -49,7 +49,8 @@ module.exports = grahamPage = {
       deletedPic.destroy();
       $(this).parents(".row")[0].remove();
       grahamPage.loadPictures();
-    })
+    });
+
   },
   loadPictures: function (collection) {
     $(".pics").html("");
