@@ -1,4 +1,6 @@
-m# bb-instafam
+# bb-instafam
+
+Class assignment. View live at http://sallykingston.me/instaGraham/
 
 ## Description
 Welcome to the beginnings of [Backbone](http://backbonejs.org/)!
